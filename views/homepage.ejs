@@ -72,8 +72,7 @@
               <div class="lx-row">
                 <div class="lx-row lx-card">
                   <h1 class="title">
-                    <i class="fas fa-info-circle"></i>&nbsp;Welcome to Armaan's
-                    corner of the Internet
+                    <i class="fas fa-info-circle"></i>&nbsp;Welcome to <%= fullName %> Corner of the Internet
                   </h1>
                 </div>
                 <div class="lx-row lx-card">
@@ -82,9 +81,7 @@
                   </h1>
                   <div class="text">
                     <p>
-                      Hi, my name is&nbsp;<b>Armaan Dhanji</b>, but I'm better
-                      known by my nickname&nbsp;<i>@armaand</i>, and I'm a
-                      teacher in the School of Computing at BCIT.
+                      <%= aboutMe >
                     </p>
                     <p>
                       I&nbsp;&nbsp;<i class="fas fa-heart"></i>&nbsp; to code
@@ -98,7 +95,11 @@
                     <i class="fas fa-terminal"></i>&nbsp;Technologies
                   </h1>
                   <div class="mini-cards">
-                    <span class="has-dflex-center bs-md" title="CSS"
+                    <% for (let i = 0; i < technologies.length; i++) { %>
+                        <span class="has-dflex-center bs-md" title="<%= type %>"><%= technologies[i] %></p>
+                    <% } %>
+
+                    <!-- <span class="has-dflex-center bs-md" title="CSS"
                       ><i class="fab fa-css3-alt"></i></span
                     ><span class="has-dflex-center bs-md" title="HTML"
                       ><i class="fab fa-html5"></i></span
@@ -118,7 +119,7 @@
                       ><i class="fab fa-php"></i></span
                     ><span class="has-dflex-center bs-md" title="React"
                       ><i class="fab fa-react"></i
-                    ></span>
+                    ></span> -->
                   </div>
                 </div>
                 <div class="lx-row lx-card">

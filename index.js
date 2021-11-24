@@ -13,7 +13,11 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  cardController.createCard
+  req.user.fullName = req.body.name
+  req.user.aboutMe = req.body.about
+  req.user.githubUrl = req.body.git
+  req.user.twitterUrl = req.body.twitter
+  req.user.favouriteBooks = req.body.
   res.redirect("homepage")
 })
 
