@@ -11,6 +11,12 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
   res.render("createCard");
 });
+
+app.post("/", (req, res) => {
+  cardController.createCard
+  res.redirect("homepage")
+})
+
 app.get("/people/:id", (req, res) => {
   res.render("people");
 });
